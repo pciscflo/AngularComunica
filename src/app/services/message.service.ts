@@ -6,9 +6,9 @@ import { Subject } from 'rxjs';
 })
 export class MessageService {
 
-  //subject es un objeto que contiene un observable y el observador (es)
+  // subject es un objeto que contiene un observable y el observador (es)
   subject = new Subject();
-  
+
   constructor() { }
 
   //subject emite a sus suscriptores el objeto my_object
@@ -17,10 +17,10 @@ export class MessageService {
   }
 
 
-  // Retorna un observable para que los componentes x, y 
+  // Retorna un observable para que los componentes x, y
   //puedan subscribirse a él.
   getMsg() {
     return this.subject.asObservable()
   }
-  
+
 }
